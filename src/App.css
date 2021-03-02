@@ -1,38 +1,73 @@
-.App {
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 50px;
+  width: 80vw;
+  margin: 0 auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  border: none;
+  border-radius: 5px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon {
+  width: 15px;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-container {
   display: flex;
-  flex-direction: column;
+  margin: 0 20px 50px 140px;
   align-items: center;
+  width: 350px;
+}
+.search-container > label {
+  margin-right: 10px;
+  height: 25px;
+}
+.clear-search-label:hover {
+  cursor: pointer;
+  color: rgb(29, 139, 235);
+}
+.clear-search-icon {
+  margin-left: 20px;
+
+  width: 30px;
+  cursor: pointer;
+}
+h1,
+h6 {
+  text-align: center;
+}
+h1 {
+  margin: 50px;
+}
+.pagination {
+  text-align: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin-top: 30px;
+}
+
+.pagination div {
   color: white;
+  float: left;
+  padding: 8px 16px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+/* Style the active/current link */
+.pagination div.active {
+  background-color: #05aff1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Add a grey background color on mouse-over */
+.pagination div:not(.active) {
+  background-color: #444444;
 }
